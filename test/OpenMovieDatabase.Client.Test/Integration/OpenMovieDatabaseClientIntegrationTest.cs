@@ -26,7 +26,7 @@ namespace OpenMovieDatabase.Client.Test.Integration
         }
 
         [Fact]
-        //[Fact(Skip = "Integration test")]
+        [Trait("Category", "Integration")]
         public async Task SearchAsync()
         {
             var request = new SearchRequest
@@ -45,8 +45,8 @@ namespace OpenMovieDatabase.Client.Test.Integration
             Assert.True(response.Results.All(r => r.Title.IndexOf(request.Term, StringComparison.OrdinalIgnoreCase) > -1));
         }
 
-        [Fact]
-        //[Fact(Skip = "Integration test")]
+        [Fact()]
+        [Trait("Category", "Integration")]
         public async Task SearchAsyncThrowsError()
         {
             var request = new SearchRequest

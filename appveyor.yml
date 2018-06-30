@@ -8,14 +8,14 @@ before_build:
   # Display .NET Core version
   - cmd: dotnet --version
   - cmd: dotnet restore ./OpenMovieDatabaseNetClient.sln --verbosity m
- dotnet_csproj:
-  patch: true
-  file: '**\*.csproj'
-  version: '{version}'
-  package_version: '{version}'
-  assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
+dotnet_csproj:
+    patch: true
+    file: '\src\**\*.csproj'
+    version: '{version}'
+    package_version: '{version}'
+    assembly_version: '{version}'
+    file_version: '{version}'
+    informational_version: '{version}'
 build:
   project: OpenMovieDatabaseNetClient.sln
   verbosity: normal

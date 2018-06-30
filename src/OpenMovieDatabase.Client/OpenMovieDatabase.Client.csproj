@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
+    <Authors>@javnov</Authors>
+    <Company />
+    <PackageId>OpenMovieDatabaseApiClient</PackageId>
+    <Product>OpenMovieDatabaseApiClient</Product>
+    <Description>Open movie databsae api .net client</Description>
+    <PackageProjectUrl>https://github.com/javnov/omdb-api-net-client</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/javnov/omdb-api-net-client/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/javnov/omdb-api-net-client</RepositoryUrl>
+    <PackageTags>omdb,omdb-api,javnov</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,11 +1,10 @@
 configuration: Release
-image: Visual Studio 2017
-pull_requests:
-  - do_not_increment_build_number: true
+image:
+    Visual Studio 2017
 init:
   # Good practise, because Windows line endings are different from Unix/Linux ones
   - cmd: git config --global core.autocrlf true
-before_buid:
+before_build:
   # Display .NET Core version
   - cmd: dotnet --version
   - cmd: dotnet restore ./src/src.csproj --verbosity m
@@ -17,6 +16,9 @@ build:
 
 #tests
 test:
+  assemblies:
+    only:
+        - OpenMovieDatabase.Client.Test.dll
   # all except categories to test
   categories:
     except:
@@ -26,7 +28,7 @@ test:
 deploy:
     provider: NuGet
     api_key:
-        secure: wO5eiWkOc3xv1qM1mChKx6weYq9h795U6u5NJg6kqwdSgsXZVCXjQJk6G05MuPKC
+        secure: p29F21IZFy2nYYvu4elqX/7wqm4be6J6V0dDdYyGXYCW4BvbGTx0UdIsblkg8/33
     skip_symbols: false
     artifact: /.*\.nupkg/
     on:

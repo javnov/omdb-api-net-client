@@ -5,7 +5,7 @@ namespace OpenMovieDatabase.Client
     public class BasicResponse
     {
         public string Title { get; }
-        public int Year { get; }
+        public int?[] Year { get; }
         public string ImdbID { get; }
         public ItemType Type { get; }
         public Uri Poster { get; }

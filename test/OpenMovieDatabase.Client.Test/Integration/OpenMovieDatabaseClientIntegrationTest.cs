@@ -22,7 +22,7 @@ namespace OpenMovieDatabase.Client.Test.Integration
              var httpClient = new HttpClient(handler);
 
             //I'm using the same api key that http://www.omdbapi.com this could be stop working any moment
-            _sut = new OpenMovieDatabaseClient("PlzBanMe", httpClient);
+            _sut = new OpenMovieDatabaseClient("BanMePlz", httpClient);
         }
 
         [Fact]
@@ -59,7 +59,7 @@ namespace OpenMovieDatabase.Client.Test.Integration
         }
 
         [Fact]
-        //[Fact(Skip = "Integration test")]
+        [Trait("Category", "Integration")]
         public async Task GetByIdOrTitleAsync()
         {
             var request = new GetByIdOrTitleRequest
@@ -85,7 +85,7 @@ namespace OpenMovieDatabase.Client.Test.Integration
         }
 
         [Fact]
-        //[Fact(Skip = "Integration test")]
+        [Trait("Category", "Integration")]
         public async Task GetByIdOrTitleAsyncThrowsError()
         {
             var request = new GetByIdOrTitleRequest

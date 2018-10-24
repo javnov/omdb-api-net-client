@@ -1,5 +1,4 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace OpenMovieDatabase.Client.Internal
 {
@@ -9,7 +8,8 @@ namespace OpenMovieDatabase.Client.Internal
         internal string Title { get; set; }
 
         [JsonProperty]
-        internal int Year { get; set; }
+        [JsonConverter(typeof(YearJsonConverter))]
+        internal int?[] Year { get; set; }
 
         [JsonProperty]
         internal string Rated { get; set; }

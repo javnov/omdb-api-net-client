@@ -19,6 +19,7 @@ namespace OpenMovieDatabase.Client.Test
                 Assert.Throws<ArgumentNullException>(() => new OpenMovieDatabaseClient(apiKey, null));
             }
 
+            [Fact]
             public void ShouldThrowWhenHttpClientIsNull()
             {
                 Assert.Throws<ArgumentNullException>(() => new OpenMovieDatabaseClient("api-key", null));

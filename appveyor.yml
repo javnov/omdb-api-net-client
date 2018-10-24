@@ -10,7 +10,7 @@ before_build:
   - cmd: dotnet restore ./OpenMovieDatabaseNetClient.sln --verbosity m
 dotnet_csproj:
     patch: true
-    file: '\src\**\*.csproj'
+    file: '**\*.csproj'
     version: '{version}'
     package_version: '{version}'
     assembly_version: '{version}'

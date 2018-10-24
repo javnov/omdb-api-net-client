@@ -14,6 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Internal\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
